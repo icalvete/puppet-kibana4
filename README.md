@@ -1,4 +1,4 @@
-#puppet-kibana3
+#puppet-kibana4
 
 Puppet manifest to install and configure kibana 4
 

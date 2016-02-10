@@ -14,7 +14,8 @@ class kibana4 (
   $elasticsearch_server      = $kibana4::params::elasticsearch_server,
   $elasticsearch_server_auth = $kibana4::params::elasticsearch_server_auth,
   $elasticsearch_user        = $kibana4::params::elasticsearch_user,
-  $elasticsearch_user_pass   = $kibana4::params::elasticsearch_user_pass
+  $elasticsearch_user_pass   = $kibana4::params::elasticsearch_user_pass,
+  $config_version            = '4.4'
 
 ) inherits kibana4::params {
 

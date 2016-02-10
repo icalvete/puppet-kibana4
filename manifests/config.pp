@@ -25,7 +25,7 @@ class kibana4::config {
   file{ 'kibana4_config':
     ensure  => present,
     path    => "${kibana4::params::kibana_document_root}/kibana/${kibana4::params::config_file}",
-    content => template("${module_name}/${kibana4::params::config_file}.erb"),
+    content => template("${module_name}/${kibana4::params::config_file}${kibana4::config_version}.erb"),
     owner   => 'root',
     group   => 'root',
     mode    => '0644',

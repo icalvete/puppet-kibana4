@@ -22,7 +22,7 @@ class kibana4::install {
     cwd     => $kibana4::params::kibana_document_root,
     command => "/bin/tar xfz /tmp/${kibana4::repo_resource}",
     require => Common::Down_resource['kibana4_get_package'],
-    unless  => "/usr/bin/test -f ${kibana4::params::kibana_document_root}/kibana/config/kibana.yml"
+    unless  => "/usr/bin/test -f ${kibana4::params::kibana_document_root}/kibana/${kibana4::params::config_file}"
   }
 
   exec {'kibana4_link_package':

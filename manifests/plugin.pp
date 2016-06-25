@@ -25,10 +25,13 @@ define kibana4::plugin (
 
   }
 
+  $command = "${kibana4::params::kibana_document_root}/kibana/${kibana4::params::bin_file} plugin ${plugin_operation}"
+  $unless  = "${kibana4::params::kibana_document_root}/kibana/${kibana4::params::bin_file} plugin --list ${unless_plugin_operation}"
+
   exec {"kibana4_install_plugin_${plugin_name}":
     cwd     => $kibana4::params::kibana_document_root,
-    command => "${kibana4::params::kibana_document_root}/kibana/${kibana4::params::bin_file} plugin ${plugin_operation}",
-    unless  => "${kibana4::params::kibana_document_root}/kibana/${kibana4::params::bin_file} plugin --list | ${unless_plugin_operation}",
+    command => $command,
+    unless  => $unless,
     notify  => Class['kibana4::service']
   }
 }

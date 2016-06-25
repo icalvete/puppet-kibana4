@@ -24,7 +24,7 @@ class kibana4 (
       fail('server_alias parameter must be un array')
     }
   }
-  
+
   anchor {'kibana4::begin':
     before => Class['kibana4::install']
   }

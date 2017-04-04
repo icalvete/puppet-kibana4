@@ -1,14 +1,14 @@
-#puppet-kibana4
+# puppet-kibana4
 
 Puppet manifest to install and configure kibana 4
 
 [![Build Status](https://secure.travis-ci.org/icalvete/puppet-kibana4.png)](http://travis-ci.org/icalvete/puppet-kibana4)
 
-##Actions:
+## Actions:
 
 Install and configure [kibana4](https://github.com/elasticsearch/kibana/)
 
-##Requires:
+## Requires:
 
 * Only works on Ubuntu
 * [hiera](http://docs.puppetlabs.com/hiera/1/index.html)
@@ -35,6 +35,6 @@ Install and configure [kibana4](https://github.com/elasticsearch/kibana/)
 
 ```
 
-##Authors:
+## Authors:
 
 Israel Calvete Talavera <icalvete@gmail.com>
